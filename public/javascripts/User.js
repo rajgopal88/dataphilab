@@ -36,6 +36,7 @@ UserApp.controller('UserAppCtrl',function($scope, userFactory) {
             $scope.loading = false; //disabling loading
         });
     };
+
     $scope.getData();
 });
 
