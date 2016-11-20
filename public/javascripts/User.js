@@ -7,6 +7,7 @@ UserApp.controller('UserAppCtrl',function($scope, userFactory) {
     $scope.userData;
     $scope.firstName;
     $scope.lastName;
+    $scope.gender = ["Male","Female"];
 
     /**
      * function which sends the link address entered by the user and in response gets the details of the issue

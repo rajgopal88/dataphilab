@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="UserApp">
     <head>
             <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -9,11 +9,11 @@
         <TITLE> Get User Details </TITLE>
     </head>
     <body>
-        <div class="container" ng-controller="IssueAppCtrl">
+        <div class="container" ng-controller="UserAppCtrl">
             <h1> Get User Details</h1>
             <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder="Raj Gopal" ng-model="" required>
-            </div><button class="btn btn-primary" ng-click=getData()>Click to get user details</button>
+                <input type="text" class="form-control" placeholder="Raj" ng-model="search" required>
+            </div><button class="btn btn-primary" ng-click=getUserData()>Click to get user details</button>
             <div>
                     &nbsp;
                     <!-- <div ng-show="loading" class="loading"><img src="assets/images/loading.jpeg"></div> -->
@@ -30,19 +30,20 @@
                                 <th>Information</th>
                             </tr>
                         </thead>
-                            <!-- <tbody>
-			            <td>{{}}</td>
-						<td>{{}}</td>
-						<td>{{}}</td>
-						<td>{{}}</td>
-						<td>{{}}</td>
-						<td>{{}}</td>
-						<td>{{}}</td>
-          			</tbody> -->
+                        <tbody>
+			                <td>{{userData.firstName}}</td>
+						    <td>{{userData.lastName}}</td>
+                            <td>{{userData.age}}</td>
+                            <td>{{userData.dob}}</td>
+                            <td>{{userData.gender}}</td>
+                            <td>{{userData.contact}}</td>
+                            <td>{{userData.info}}</td>
+                        </tbody>
                     </table>
                 </div>
             </div>
+        </div>
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-            <script src="assets/javascripts/issue.js"></script>
+            <script src="assets/javascripts/User.js"></script>
     </body>
 </html>
