@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="">
+    <head>
+            <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <style type="text/css"> h1{color:Brown;}</style>
+        <TITLE> Get User Details </TITLE>
+    </head>
+    <body>
+        <div class="container" ng-controller="IssueAppCtrl">
+            <h1> Get User Details</h1>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Raj Gopal" ng-model="" required>
+            </div><button class="btn btn-primary" ng-click=getData()>Click to get user details</button>
+            <div>
+                    &nbsp;
+                    <!-- <div ng-show="loading" class="loading"><img src="assets/images/loading.jpeg"></div> -->
+                <div class="col-sm-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>DOB</th>
+                                <th>Gender</th>
+                                <th>Phone Number</th>
+                                <th>Information</th>
+                            </tr>
+                        </thead>
+                            <!-- <tbody>
+			            <td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+          			</tbody> -->
+                    </table>
+                </div>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+            <script src="assets/javascripts/issue.js"></script>
+    </body>
+</html>
