@@ -16,7 +16,7 @@
             </div><button class="btn btn-primary" ng-click=getUserData()>Click to get user details</button>
             <div>
                     &nbsp;
-                    <!-- <div ng-show="loading" class="loading"><img src="assets/images/loading.jpeg"></div> -->
+                <div ng-show="loading" class="loading"><img src="assets/images/loading.jpeg"></div>
                 <div class="col-sm-12">
                     <table class="table table-bordered">
                         <thead>
@@ -30,14 +30,14 @@
                                 <th>Information</th>
                             </tr>
                         </thead>
-                        <tbody>
-			                <td>{{userData.firstName}}</td>
-						    <td>{{userData.lastName}}</td>
-                            <td>{{userData.age}}</td>
-                            <td>{{userData.dob}}</td>
-                            <td>{{userData.gender}}</td>
-                            <td>{{userData.contact}}</td>
-                            <td>{{userData.info}}</td>
+                        <tbody ng-repeat="x in userData">
+			                <td>{{x.firstname}}</td>
+						    <td>{{x.lastname}}</td>
+                            <td>{{x.age}}</td>
+                            <td>{{x.dob}}</td>
+                            <td>{{x.gender}}</td>
+                            <td>{{x.contact}}</td>
+                            <td>{{x.info}}</td>
                         </tbody>
                     </table>
                 </div>

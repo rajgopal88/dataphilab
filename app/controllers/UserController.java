@@ -1,6 +1,7 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.SqlRow;
 import com.fasterxml.jackson.databind.JsonNode;
 import models.User;
 import play.libs.Json;
@@ -50,8 +51,15 @@ public class UserController extends Controller {
 
         String userName = json.findPath("search").asText();
 
-        List<User> userDetails = User.find.where().eq("firstName", userName).findList();
+        //List<User> userDetails = User.find.where().eq("firstName", userName).findList();
 
-        return ok(Json.toJson(userDetails));
+        String sql = "SELECT * FROM user where firstName = :username";
+        List<SqlRow> sqlRows = Ebean.createSqlQuery(sql)
+                .setParameter("username", userName)
+                .findList();
+        /*Map<String,Object> userDetails = new HashMap<>();
+        userDetails.put("userDetails",sqlRows);*/
+
+        return ok(Json.toJson(sqlRows));
     }
 }

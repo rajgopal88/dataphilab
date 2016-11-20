@@ -33,6 +33,7 @@ UserApp.controller('UserAppCtrl',function($scope, userFactory) {
         userFactory.getUserData(data).success(function(response) {
             console.log(response);
             $scope.userData = response;
+            $scope.loading = false; //disabling loading
         });
     };
     $scope.getData();
