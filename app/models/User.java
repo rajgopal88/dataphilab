@@ -1,5 +1,6 @@
 package models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -8,15 +9,23 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User {
 
+    @Column(name="firstName")
     private String firstName;
+
+    @Column(name="lastName")
     private String lastName;
+
     private int age;
+
     private String dob;
+
     private String gender;
+
     private int contact;
+
     private String info;
 
     public String getFirstName() { return firstName; }
