@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="">
+    <head>
+            <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <style type="text/css"> h2{color:Brown;}</style>
+        <TITLE> Add User Details </TITLE>
+    </head>
+    <body>
+        <div class="container" ng-controller="">
+            <h2> Add User Details </h2>
+            <form class>
+				First Name:<br>
+                <input class="col-md-3" type="text" name="firstname" ng-model="firstName" placeholder="Raj" required><br>
+                <br>
+                Last Name:<br>
+                <input class="col-md-3" type="text" name="lastname" ng-model="lastName" placeholder="Gopal" required><br>
+                <br>
+                Age:<br>
+                <input class="col-md-3" type="text" name="age" ng-model="age" placeholder="100" required><br>
+                <br>
+                DOB:<br>
+                <input class="col-md-3" type="text" name="dob" ng-model="dob" placeholder="01/01/1800" required><br>
+                <br>
+                Gender:<br>
+                <select class="" ng-model="gender" ng-options="x in x for "></select><br>
+                <br>
+                Contact Number:<br>
+                <input class="col-md-3" type="text" name="contact" ng-model="contact" placeholder="9980176821" required><br>
+                <br>
+                Free Text Information:<br>
+                <input class="col-md-3"type="text" name="info" ng-model="info" placeholder="Useful Information"><br>
+                <br>
+                <br>
+                <button class="btn btn-primary" ng-click=> Click to save user data</button>
+			</form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    </body>
+</html>
