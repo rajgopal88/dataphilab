@@ -1,12 +1,14 @@
-package model;
+package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by rajgopal on 20/11/16.
  */
 
 @Entity
+@Table(name = "User")
 public class User {
 
     private String firstName;

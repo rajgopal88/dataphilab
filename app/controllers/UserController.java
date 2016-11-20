@@ -2,7 +2,7 @@ package controllers;
 
 import com.avaje.ebean.Ebean;
 import com.fasterxml.jackson.databind.JsonNode;
-import model.User;
+import models.User;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;

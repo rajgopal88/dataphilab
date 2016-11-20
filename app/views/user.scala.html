@@ -25,7 +25,7 @@
                 <input class="col-md-3" type="text" name="dob" ng-model="dob" placeholder="01/01/1800" required><br>
                 <br>
                 Gender:<br>
-                <select class="col-md-3" ng-model="gender" ng-options="x for x in gender"></select><br>
+                <select class="col-md-3" ng-model="gender1" ng-options="x for x in genderList"></select><br>
                 <br>
                 Contact Number:<br>
                 <input class="col-md-3" type="text" name="contact" ng-model="contact" placeholder="9980176821" required><br>
@@ -34,9 +34,10 @@
                 <input class="col-md-3"type="text" name="info" ng-model="info" placeholder="Useful Information"><br>
                 <br>
                 <br>
-                <button class="btn btn-primary" ng-click=> Click to save user data</button>
+                <button class="btn btn-primary" ng-click=getData()> Click to save user data</button>
 			</form>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="assets/javascripts/User.js"></script>
     </body>
 </html>

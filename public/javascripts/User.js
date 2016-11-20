@@ -5,9 +5,7 @@ var UserApp = angular.module('UserApp',[]);
 UserApp.controller('UserAppCtrl',function($scope, userFactory) {
 
     $scope.userData;
-    $scope.firstName;
-    $scope.lastName;
-    $scope.gender = ["Male","Female"];
+    $scope.genderList = ["Male","Female"];
 
     /**
      * function which sends the link address entered by the user and in response gets the details of the issue
@@ -53,12 +51,12 @@ UserApp.factory('userFactory', ['$http', function($http) {
      * http request which call the api for getting the details
      */
     userFactory.getData = function(data) {
-        return $http.post('', data, config);
+        return $http.post('/adduser', data, config);
     };
 
-    userFactory.getUserData = function(data) {
-        return $http.post('', data, config);
-    };
+    /*userFactory.getUserData = function(data) {
+        return $http.post('/', data, config);
+    };*/
 
     return userFactory;
 }]);
