@@ -29,10 +29,10 @@ public class UserController extends Controller {
         String firstName = json.findPath("firstName").asText();
         String lastName = json.findPath("lastName").asText();
         int age = json.findPath("age").asInt();
-        String dob = json.findPath("firstName").asText();
-        String gender = json.findPath("firstName").asText();
-        int contact = json.findPath("firstName").asInt();
-        String info = json.findPath("firstName").asText();
+        String dob = json.findPath("dob").asText();
+        String gender = json.findPath("gender").asText();
+        String contact = json.findPath("contact").asText();
+        String info = json.findPath("info").asText();
 
         User user = new User(firstName, lastName, age, dob, gender, contact, info);
         Ebean.save(user);

@@ -24,7 +24,7 @@ public class User {
 
     private String gender;
 
-    private int contact;
+    private String contact;
 
     private String info;
 
@@ -48,15 +48,15 @@ public class User {
 
     public void setGender(String gender) { this.gender = gender; }
 
-    public int getContact() { return contact; }
+    public String getContact() { return contact; }
 
-    public void setContact(int contact) { this.contact = contact; }
+    public void setContact(String contact) { this.contact = contact; }
 
     public String getInfo() { return info; }
 
     public void setInfo(String info) { this.info = info; }
 
-    public User(String firstName, String lastName, int age, String dob, String gender, int contact, String info) {
+    public User(String firstName, String lastName, int age, String dob, String gender, String contact, String info) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;

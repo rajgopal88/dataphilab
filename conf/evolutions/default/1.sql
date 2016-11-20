@@ -9,7 +9,7 @@ create table user (
   age                           integer,
   dob                           varchar(255),
   gender                        varchar(255),
-  contact                       integer,
+  contact                       varchar(255),
   info                          varchar(255)
 );
 
