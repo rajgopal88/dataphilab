@@ -9,7 +9,7 @@ GET     /search                     @controllers.UserController.searchUI
 
 POST    /adduser                    @controllers.UserController.addUser
 
-#POST    /searchuser                 @controllers.UserController.searchUser
+POST    /searchuser                 @controllers.UserController.searchUser
 
 # An example controller showing how to use dependency injection
 GET     /count                      @controllers.CountController.count

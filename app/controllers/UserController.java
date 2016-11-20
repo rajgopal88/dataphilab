@@ -3,11 +3,14 @@ package controllers;
 import com.avaje.ebean.Ebean;
 import com.fasterxml.jackson.databind.JsonNode;
 import models.User;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import views.html.search;
 import views.html.user;
+
+import java.util.List;
 
 /**
  * Created by rajgopal on 20/11/16.
@@ -21,6 +24,7 @@ public class UserController extends Controller {
         //POST Body
         Http.RequestBody body = request().body();
         JsonNode json = body.asJson();
+
         String firstName = json.findPath("firstName").asText();
         String lastName = json.findPath("lastName").asText();
         int age = json.findPath("age").asInt();
@@ -31,10 +35,23 @@ public class UserController extends Controller {
 
         User user = new User(firstName, lastName, age, dob, gender, contact, info);
         Ebean.save(user);
-        return ok("okk");
+        return ok("Saved"+Json.toJson(user));
     }
 
-    //searchUser
+
 
     public Result searchUI() { return ok(search.render()); }
+
+    public Result searchUser() {
+
+        //POST Body
+        Http.RequestBody body = request().body();
+        JsonNode json = body.asJson();
+
+        String userName = json.findPath("search").asText();
+
+        List<User> userDetails = User.find.where().eq("firstName", userName).findList();
+
+        return ok(Json.toJson(userDetails));
+    }
 }

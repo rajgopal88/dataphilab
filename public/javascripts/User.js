@@ -54,9 +54,9 @@ UserApp.factory('userFactory', ['$http', function($http) {
         return $http.post('/adduser', data, config);
     };
 
-    /*userFactory.getUserData = function(data) {
-        return $http.post('/', data, config);
-    };*/
+    userFactory.getUserData = function(data) {
+        return $http.post('/searchuser', data, config);
+    };
 
     return userFactory;
 }]);
